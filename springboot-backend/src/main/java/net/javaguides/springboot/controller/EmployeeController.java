@@ -25,6 +25,7 @@ import net.javaguides.springboot.repository.EmployeeRepository;
 @RequestMapping("/api/v1/")
 public class EmployeeController {
 
+	//import repo
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
@@ -40,7 +41,7 @@ public class EmployeeController {
 		return employeeRepository.save(employee);
 	}
 	
-	// get employee by id rest api
+	// get employee by id rest api or throw error
 	@GetMapping("/employees/{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
 		Employee employee = employeeRepository.findById(id)
