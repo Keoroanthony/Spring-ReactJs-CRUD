@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { DatePicker } from 'antd';
 import EmployeeService from '../services/EmployeeService';
 
 class CreateEmployeeComponent extends Component {
@@ -100,6 +101,7 @@ class CreateEmployeeComponent extends Component {
                                             <input placeholder="Email Address" name="emailId" className="form-control" 
                                                 value={this.state.emailId} onChange={this.changeEmailHandler}/>
                                         </div>
+                                        <DatePicker />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                         <button className="btn btn-success" onClick={this.saveOrUpdateEmployee}>Save</button>
                                         <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
